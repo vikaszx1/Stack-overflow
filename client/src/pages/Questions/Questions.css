@@ -34,6 +34,30 @@
     white-space: pre-line;
 }
 
+@media only screen and (max-width: 1000px) {
+    .question-details-page{
+      width: 100%;
+      /* text-align: center; */
+      /* margin-right: 50%; */
+      /* height: 50%; */
+      /* text-align: center; */
+      margin-left: 4%;
+      /* margin-right: 4%; */
+      /* margin-bottom: 0%; */
+      /* position: relative;
+      left: 20%; */
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .question-details-page{
+      width: 70%;
+      
+      /* margin-left: -10%; */
+      
+    }
+  }
+
 .question-details-container .question-details-tags{
     display: flex;
     align-items: center;
@@ -121,4 +145,5 @@
     font-size: 14px;
     line-height: 18px;
     white-space: pre-line;
+    /* margin-left: 40%; */
 }

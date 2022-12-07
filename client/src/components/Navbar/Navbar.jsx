@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import decode from 'jwt-decode'
@@ -9,6 +9,10 @@ import Avatar from '../../components/Avatar/Avatar'
 
 import './Navbar.css'
 import { setCurrentUser } from '../../actions/currentUser'
+import icon from '../../assets/icon.png'
+import register from '../../Community/Fpages/register/Register'
+// import Hidden from '@material-ui/core/Hidden';
+
 
 
 const Navbar = () => {
@@ -35,30 +39,64 @@ useEffect(() => {
 },[dispatch])
 
 
+  const [activeHam, setActiveHam] = useState(false);
+
+  const menuItems = (
+    <>
+      <Link to='/' className='nav-item nav-btn a'>About</Link>
+      <Link to='/' className='nav-item nav-btn a'>Products</Link>
+      <Link to='/login' className='nav-item nav-btn a'>For Teams</Link>
+    </>
+  );
+
+
   return (
-    <nav className='main-nav'>
+    <div className="navbar-container">
+          <nav className='main-nav'>
         <div className='navbar'>
            <Link to='/' className='nav-item nav-logo'>
-            <img src={logo} alt='logo' />
+            <img src={logo} className='logo-img' alt='logo' />
+            <img src={icon} className='icon-img' alt='logo' />
+
            </Link>
-           <Link to='/' className='nav-item nav-btn'>About</Link>
-           <Link to='/' className='nav-item nav-btn'>Products</Link>
-           <Link to='/' className='nav-item nav-btn'>For Teams</Link>
-           <form >
-            <input type="text" placeholder='Search...' />
-             <img src={search} alt="search" width="18" className='search-icon'/>
-           </form>
-             {User === null ?
+
+
+
+           <form id='nav-form'>
+              <input type="text" className='nav-input' placeholder='Search...' />
+              <img src={search} alt="search" width="18" className='search-icon'/>
+          </form>
+
+
+
+
+
+
+
+          <div className="menu">{menuItems}</div>
+
+          {User === null ?
                <Link to='/Auth' className='nav-item nav-links'>Log in</Link> :
                <>
-                 <Avatar backgroundColor='#009dff' px="10px" py="7px" borderRadius="50%" color='white'><Link to={`/Users/${User?.result?._id}`} style={{color:"white", textDecoration:'none'}}>{User.result.name.charAt(0).toUpperCase()}</Link></Avatar>
+                 <Avatar className='avatar' backgroundColor='#009dff' px="10px" py="7px" borderRadius="50%" color='white'><Link to={`/Users/${User?.result?._id}`}  style={{color:"white", textDecoration:'none'}} className='avatar'>{User.result.name.charAt(0).toUpperCase()}</Link></Avatar>
                  <button className='nav-item nav-links' onClick={handleLogout}>Log out</button>
-               </> 
+               </>
              }
+
+           <button
+              className={activeHam ? "hamburger active-hamburger" : "hamburger"}
+              onClick={() => setActiveHam(!activeHam)}
+          >
+              <span></span>
+              <span></span>
+              <span></span>
+           </button>
 
 
       </div>
     </nav>
+    {activeHam && <div className="nav-dropdown">{menuItems}</div>}
+ </div>
   )
 }
 

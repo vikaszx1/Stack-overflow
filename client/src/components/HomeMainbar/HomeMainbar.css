@@ -1,15 +1,69 @@
 .main-bar{
-    width: calc(100% - 300px - 24px );
+    /* width: calc(100% - 300px - 24px ); */
     float: left;
-    margin: 25px 0px;
-    padding: 0;
+    /* margin: 25px 0px; */
+    margin: 25px 2%;
+    padding: 0%;
 }
+
+@media only screen and (max-width: 1000px) and (min-width: 500px) {
+    .main-bar {
+      float: left;
+      width: 100%;
+      margin-left: 0%;
+      
+    }
+  }
+
+  @media only screen and (min-width: 999px) {
+    .main-bar {
+      float: left;
+      width: 75%;
+      /* margin-left: -2%; */
+      margin-right: 15%;
+      
+    }
+  }
 
 .main-bar-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1% 5%;
+    margin: 2%;
+
 }
+
+@media only screen and (max-width: 610px) {
+    .main-bar-header h1{
+      /* float: left; */
+      /* width: 80%; */
+      padding: 0%;
+      text-align: center;
+      font-size: large;
+      font: 1.4em sans-serif;
+      width: 50%;
+      /* height: 20%; */
+      /* margin-left: 0%; */
+      
+    }
+  }
+
+  @media only screen and (max-width: 610px) {
+    .main-bar-header .ask-btn{
+      /* float: left; */
+      /* width: 80%; */
+      margin-right: 0%;
+      text-align: center;
+      font-size: small;
+
+      width: 40%;
+      /* height: 20%; */
+      /* margin-left: 0%; */
+      
+    }
+  }
+
 
 .main-bar-header h1{
     font-weight: 400;
@@ -30,8 +84,9 @@
 }
 
 .display-question-container{
-    min-height: 80px;
+    /* min-height: 80px; */
     width: 100%;
+    margin: auto 1%;
     display: flex;
     align-items: center;
     background-color: #fdf7e2;
@@ -40,16 +95,34 @@
 
 .display-question-container .display-votes-ans{
     padding: 20px;
+    /* padding: 0%;
+    margin-right: -10%; */
+    
 }
+
+@media only screen and (max-width: 999px) {
+    .display-question-container .display-votes-ans {
+      padding: 2% 0% 2%;
+      margin: 0% ;
+      /* height: -30%; */
+      /* position: relative; */
+      /* bottom: 5%; */
+      
+      /* align-items: center; */
+      
+    }
+  }
 
 .display-question-container .display-votes-ans p{
     margin: 0%;
     text-align: center;
+    /* width: auto; */
 }
 
 .display-question-details{
     flex-grow: 1;
-    padding: 0px 20px;
+    padding: 0px;
+    margin: auto 5%;
 }
 
 .question-title-link{
@@ -89,4 +162,5 @@
 
 .display-tags-time .display-time{
     font-size: 13px;
+    /* word-break: break; */
 }

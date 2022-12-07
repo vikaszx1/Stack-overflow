@@ -7,6 +7,9 @@ import { applyMiddleware, compose, legacy_createStore } from 'redux'
 
 import thunk from 'redux-thunk'
 import Reducers from './reducers'
+import App2 from './App2';
+import { DarkModeContextProvider } from './Community/context/darkModeContext';
+import { AuthContextProvider } from './Community/context/AuthContext';
 
 const store = legacy_createStore( Reducers, compose(applyMiddleware(thunk)))
 
@@ -14,6 +17,13 @@ ReactDOM.render(
   <Provider store={store}>
    <React.StrictMode>
      <App />
+
+     <AuthContextProvider className='app'>
+      <DarkModeContextProvider>
+        <App2 />
+      </DarkModeContextProvider>
+     </AuthContextProvider>
+
    </React.StrictMode>
   </Provider>,
   document.getElementById('root')

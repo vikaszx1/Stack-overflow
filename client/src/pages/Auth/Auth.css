@@ -1,6 +1,6 @@
 .auth-section{
     min-height: 100vh;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     background-color: #f1f2f3;
     display: flex;
     justify-content: center;
@@ -8,26 +8,80 @@
 }
 
 .auth-container-1{
-    padding: 20px;
-    margin-right: 30px;
+    padding: 2%;
+    margin-right: 2%;
+    /* width: 40%; */
 }
+
+@media only screen and (max-width: 500px) {
+    .auth-container-1 {
+      width: 50%;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    .auth-container-1 {
+      width: 50%;
+      margin-left: 15%;
+    }
+  }
+
 
 .login-logo{
     padding: 20px 30px;
 }
 
 .auth-container-2{
-    min-width: 20%;
+    /* min-width: 20%; */
     /* margin: 10% 0px 30px; */
+    width: 50%;
+    margin-top: 10%;
+    /* margin-right: 15%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* @media only screen and (max-width: 500px) {
+    .auth-container-2 {
+      margin-left: 15%;
+
+    }
+  } */
+
+
+@media only screen and (max-width: 500px) {
+    .auth-container-2 form{
+      margin: 10%;
+      width: 90%;
+      /* margin-right: 20%; */
+
+    }
+  }
+
+  @media only screen and (min-width: 700px) and (max-width:1160px) {
+    .auth-container-2 form{
+      margin:  0%;
+      padding: 10%;
+      width: 70%;
+
+    }
+  }
+
+  @media only screen and (min-width: 1160px) {
+    .auth-container-2 form{
+      margin: 0% 0%;
+      width: 70%;
+
+    }
+  }
+
 .auth-container-2 form{
-    width: 100%;
-    padding: 20px;
+    /* width: 50%; */
+    /* margin-top: 5%; */
+    /* margin-right: 0%; */
+    padding: 2% 2% 0%;
     background-color: white;
     border-radius: 10px;
     display: flex;

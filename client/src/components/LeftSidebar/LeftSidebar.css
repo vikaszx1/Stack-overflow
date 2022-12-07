@@ -1,5 +1,6 @@
 .left-sidebar{
-    width:164px;
+    /* width:164px; */
+    width: 20%;
     height: 100vh;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
     transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
@@ -7,6 +8,19 @@
     box-sizing: border-box;
     font-size: 13px;
 }
+
+@media only screen and (min-width: 999px) {
+    .left-sidebar{
+      margin-right: 5%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .left-sidebar{
+      width: 20%;
+      margin-left: 0%;
+    }
+  }
 
 .side-nav{
     height: auto;
@@ -16,24 +30,41 @@
     padding: 20px 0px;
 }
 
+@media only screen and (max-width: 500px) {
+    .App{
+      /* width: 100%; */
+      margin-left: 0%;
+    }
+  }
+
 .side-nav-div{
     padding: 10px 0px;
+    margin-left: 0%;
 
 }
 
 .side-nav-div div{
     padding-left: 10px;
+    width: 80%;
 }
 
 .side-nav-links{
     text-decoration: none;
     color: #3a3a3a;
     display: flex;
+    /* width: 80%; */
     align-items: center;
     justify-content: flex-start;
     padding-left: 10px;
     transition: 0.2s;
 }
+
+@media only screen and (max-width: 600px) {
+    .side-nav-links img{
+      /* width: 50%; */
+      margin-left: -10%;
+    }
+  }
 
 .side-nav-links:hover{
     color: black;
@@ -42,6 +73,31 @@
 .active{
     font-weight: bolder;
     color: black;
+    /* width: 80%; */
     background-color: rgb(225,225,225);
     border-right: solid 3px #ef8236;
+}
+
+@media (max-width: 501px) {
+  .globe-ques {
+    position: relative;
+    top: 11px;
+    left: -18%;
+
+  }
+
+  .globe-img {
+    position: relative;
+    top: -12px;
+    left: 30%;
+  }
+
+  .tags {
+    margin-left: -15px;
+  }
+
+  .users {
+    margin-left: -15px;
+  }
+  
 }

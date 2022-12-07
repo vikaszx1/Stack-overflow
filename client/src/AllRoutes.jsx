@@ -10,6 +10,12 @@ import DisplayQuestion from './pages/Questions/DisplayQuestion'
 import Tags from './pages/Tags/Tags'
 import Users from './pages/Users/Users'
 import UserProfile from './pages/UserProfile/UserProfile'
+import Register from "./Community/Fpages/register/Register"
+import Login from "./Community/Fpages/login/Login"
+import Fhome from "./Community/Fpages/Fhome/Fhome"
+import Profile from './Community/Fpages/profile/Profile'
+import App2 from "./App2"
+
 
 const AllRoutes = () => {
   return (
@@ -22,8 +28,14 @@ const AllRoutes = () => {
         <Route path='/Tags' element={<Tags />} />
         <Route path='/Users' element={<Users />} />
         <Route path='/Users/:id' element={<UserProfile />} />
+        <Route path='/Register' element={<Register />} />
+        <Route path='/Login' element={<Login />} />
+        <Route index2 element={<Fhome />} />
+
     </Routes>
   )
 }
 
 export default AllRoutes
+
+// <Route path='/Fhome' element={<App2 />} />

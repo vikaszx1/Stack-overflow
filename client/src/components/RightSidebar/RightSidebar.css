@@ -1,10 +1,49 @@
 
 .right-sidebar{
     float: right;
-    width: 300px;
+    /* width: 300px; */
+    width: 35%;
     margin: 0px 0px 15px 24px;
     font-size: 15px;
 }
+
+@media only screen and (max-width: 500px) {
+    .right-sidebar {
+      /* float: left; */
+      position: relative;
+      /* left: -2%; */
+      text-align: center;
+      top: 0%;
+      width: 100%;
+      left: 4%;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) and (min-width: 501px) {
+    .right-sidebar {
+      /* float: left; */
+      position: relative;
+      /* left: -2%; */
+      /* text-align: center; */
+      top: 0%;
+      left: 1%;
+      /* margin-left: 5%; */
+      width: 100%;
+      /* margin-left: 0; */
+    }
+  }
+
+  @media only screen and (min-width: 999px) {
+    .right-sidebar {
+      position: absolute;
+      top: 8%;
+      right: 0%;
+      /* left: 4%; */
+      width: 20%;
+      /* margin-right: 5%; */
+    }
+  }
+
 
 .widget{
     margin-top: 10px;
@@ -40,6 +79,7 @@
 
 .widget-tags{
     margin-top: 40px;
+    background-color: white;
     box-shadow: 3px 3px 10px rgb(0 0 0 / 5%),
     -3px -3px 10px rgb(0 0 0 / 5%);
 }
@@ -50,6 +90,10 @@
     background-color: #f8f9f9;
     border: solid 1px #e3e6e8;
     font-size: 13px;
+}
+.widget-tags h3 {
+  padding: 9px 9px 0px;
+  margin-bottom: 10px;
 }
 
 .widget-tags-div{

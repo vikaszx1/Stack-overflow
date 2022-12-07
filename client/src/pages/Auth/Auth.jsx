@@ -71,7 +71,7 @@ const Auth = () => {
               </label>
             )
           }
-          <button type='submit' className='auth-btn'>{ isSignup ? 'Sigh up': 'Log in' }</button>
+          <button type='submit' className='auth-btn'>{ isSignup ? 'Sign up': 'Log in' }</button>
           {
             isSignup && (
               <p style={{ color: "#666767", fontSize:"13px"}}>

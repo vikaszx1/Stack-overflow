@@ -22,3 +22,16 @@
 .user-profile-link h5{
     margin: 0px 10px;
 }
+
+
+@media (max-width: 501px) {
+    .user-list-container {
+       padding: 2px 50px;
+       /* width: 50%; */
+    }
+
+    .usersProfile{
+        padding-left: 50px;
+    }
+    
+  }
