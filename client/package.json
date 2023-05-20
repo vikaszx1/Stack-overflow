@@ -38,7 +38,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "author": "",
+  "author": "vikas",
   "license": "ISC",
   "browserslist": {
     "production": [
